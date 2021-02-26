@@ -6,14 +6,14 @@ Write-Host "Search ok"
 
 Foreach ($VM in $BackupJob)
 {
-    $VM | Select @{ N="VM Name"; E={$VM.GetObjectsInJob().Name} }, @{ N="JobName"; E={$VM.GetJobDisplayName()} }
+    $VM | Select @{ N="VM Name"; E={$VM.GetObjectsInJob().Name} }, @{ N="Job Name"; E={$VM.GetJobDisplayName()} }
 }
 
 #
 # Search in progress ...
 # Search ok
 #
-# VM Name                        JobName                          
+# VM Name                        Job Name                          
 # -------                        -------                              
 # WIN-BCKP-01                    Backup Job 03 - WIN-BCKP-01      
 # {WIN-RDGATEWAY-02, WIN-RDS-02} Backup Job 06 - RDS-00              
