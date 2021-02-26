@@ -1,7 +1,7 @@
 Add-PSSnapin VeeamPSSnapin
 
 Write-Host "Search in progress ..."
-$BackupJob = Get-VBRJob | Where {($_.JobType -eq "Backup") -and ($_.VssOptions.VssSnapshotOptions.enabled -eq $true) -and ($_.VssOptions.VssSnapshotOptions.ApplicationProcessingEnabled -eq $true)}
+$BackupJob = Get-VBRJob | Where { ($_.JobType -eq "Backup") -and ($_.VssOptions.VssSnapshotOptions.enabled -eq $true) -and ($_.VssOptions.VssSnapshotOptions.ApplicationProcessingEnabled -eq $true) }
 Write-Host "Search ok"
 
 Foreach ($VM in $BackupJob)
